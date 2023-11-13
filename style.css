@@ -132,17 +132,7 @@ hr {
     margin: 20px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Responsive desktop design */
 @media (min-width: 601px) {
     #main {
         flex-direction: row;
