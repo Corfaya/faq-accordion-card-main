@@ -134,6 +134,10 @@ hr {
 
 /* Responsive desktop design */
 @media (min-width: 601px) {
+    body {
+        margin-top: 0;
+    }
+    
     #main {
         flex-direction: row;
         justify-content: center;
