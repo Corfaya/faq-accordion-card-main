@@ -1,0 +1,244 @@
+/* Font + Reset + var */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-graysh-blue: hsl(240, 6%, 50%);
+    --darkest-graysh-blue: hsl(237, 12%, 33%);
+    --soft-red: hsl(14, 88%, 65%);
+}
+
+/* Work on Body */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-size: 400% 400%;
+    animation: bgAnimation 20s ease infinite;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Add animation - not requeried, just for fun */
+@keyframes bgAnimation {
+    0% {
+        background-position: 50% 0%
+    }
+
+    50% {
+        background-position: 51% 100%
+    }
+
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+/* Work on Layout */
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 300px;
+    height: auto;
+    box-shadow: 0px 30px 40px hsla(238, 29%, 16%, 0.404);
+}
+
+/* Work on Images */
+.woman {
+    max-width: 250px;
+    width: 250px;
+    transform: translateY(-110px);
+}
+
+#image-box {
+    height: 180px;
+    max-width: 100%;
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+}
+
+.box {
+    display: none;
+}
+
+/* Work on Texts */
+.faq-box {
+    transform: translateY(-50px);
+    width: 250px;
+    height: 350px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+h2:hover {
+    color: var(--soft-red);
+}
+
+h2::after {
+    content: url(./images/icon-arrow-down.svg);
+    position: absolute;
+    right: 10px;
+}
+
+.selected h2 {
+    font-weight: bolder;
+    color: black;
+}
+
+.selected h2::after {
+    content: url(./images/icon-arrow-down.svg);
+    transform: rotate(180deg);
+}
+
+p {
+    margin-top: 5px;
+    font-size: 10px;
+    color: var(--dark-graysh-blue);
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+hr {
+    border: 0.1px solid hsla(240, 4%, 91%);
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 601px) {
+    #main {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        max-width: 100%;
+        max-height: 100%;
+        width: 800px;
+        height: 450px;
+        padding: 30px 30px 30px 0px;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-position: -465px -245px;
+        background-repeat: no-repeat;
+        background-size: 800px;
+    }
+
+    .woman {
+        display: none;
+    }
+
+    #image-box {
+        width: 500px;
+        height: 400px;
+        max-height: 100%;
+        min-width: fit-content;
+        max-width: 100%;
+        background-image: url(./images/illustration-woman-online-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 400px;
+        background-position: -70px 20px;
+    }
+
+    .faq-box {
+        margin-top: 20px;
+        transform: none;
+        width: 400px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: start;
+        font-size: 24px;
+        font-weight: bolder;
+        margin-top: 30px;
+    }
+
+    h2 {
+        position: relative;
+    }
+
+    h2::after {
+        position: absolute;
+        right: 10px;
+    }
+
+    .div-box {
+       max-width: fit-content;
+       max-height: 100px;
+    }
+
+    .box {
+        display: block;
+        width: 161px;
+        height: 154px;
+        transform: translate(-78px, 135px);
+    }
+
+    p {
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
